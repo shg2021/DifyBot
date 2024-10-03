@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Cards\welcomeCard.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Cards\welcomeCard.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.12.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.8" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.22.9" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.22.9" />
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.22.9" />
+    <PackageReference Include="Microsoft.Recognizers.Text.DataTypes.TimexExpression" Version="1.8.8" />
+	<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+	<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
